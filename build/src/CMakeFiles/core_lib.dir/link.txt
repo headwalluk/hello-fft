@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcore_lib.a CMakeFiles/core_lib.dir/CsvReader.cpp.o CMakeFiles/core_lib.dir/FftProcessor.cpp.o
+/usr/bin/ranlib libcore_lib.a
