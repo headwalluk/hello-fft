@@ -11,7 +11,8 @@ MainWindow::MainWindow()
       m_open_button("Open CSV"),
       m_export_box(Gtk::Orientation::VERTICAL),
       m_export_csv_button("Export CSV"),
-      m_export_png_button("Export PNG") {
+      m_export_png_button("Export PNG"),
+      m_exit_button("Exit") {
 
     set_title("Hello FFT");
     set_default_size(800, 600);
@@ -31,6 +32,11 @@ MainWindow::MainWindow()
     m_export_menu_button.set_label("Export");
     m_button_box.append(m_export_menu_button);
     
+    // Exit button on the far right
+    m_exit_button.set_hexpand(true);
+    m_exit_button.set_halign(Gtk::Align::END);
+    m_button_box.append(m_exit_button);
+    
     // Export Popover
     m_export_popover.set_child(m_export_box);
     m_export_box.append(m_export_csv_button);
@@ -41,6 +47,7 @@ MainWindow::MainWindow()
     m_open_button.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_open_button_clicked));
     m_export_csv_button.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_export_csv_clicked));
     m_export_png_button.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_export_png_clicked));
+    m_exit_button.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_exit_button_clicked));
 }
 
 MainWindow::~MainWindow() {
@@ -128,4 +135,8 @@ void MainWindow::save_file(const std::string& title, const std::string& filter_n
     });
 
     dialog->show();
+}
+
+void MainWindow::on_exit_button_clicked() {
+    close();
 }

@@ -18,6 +18,7 @@ protected:
     void on_open_button_clicked();
     void on_export_csv_clicked();
     void on_export_png_clicked();
+    void on_exit_button_clicked();
 
     // Widgets
     Gtk::Box m_box;
@@ -30,6 +31,8 @@ protected:
     Gtk::Box m_export_box;
     Gtk::Button m_export_csv_button;
     Gtk::Button m_export_png_button;
+    
+    Gtk::Button m_exit_button;
 
     HistogramWidget m_histogram_widget;
     
