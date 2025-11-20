@@ -61,6 +61,26 @@ To run the unit tests:
 ./tests/unit_tests
 ```
 
+### Cleaning Build Artifacts
+
+To clean the build artifacts:
+
+**From the build directory:**
+```bash
+cd build
+make clean
+```
+
+**From the project root:**
+```bash
+cmake --build build --target clean
+```
+
+To completely remove all build files and start fresh, simply delete the build directory:
+```bash
+rm -rf build
+```
+
 ## Implementation
 
 ### Technology Stack
@@ -74,7 +94,7 @@ The program is written in **C++17** to ensure modern language features, performa
 
 ### Architecture
 
-The application will follow a simplified **Model-View-Controller (MVC)** pattern to separate concerns:
+The application follows a simplified **Model-View-Controller (MVC)** pattern to separate concerns:
 
 1.  **Model (Core Logic):**
     *   `CsvReader`: Responsible for parsing input files and handling format errors.

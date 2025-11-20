@@ -1,1 +1,0 @@
-/usr/bin/clang++ -Xlinker --dependency-file=CMakeFiles/unit_tests.dir/link.d CMakeFiles/unit_tests.dir/TestCsvReader.cpp.o CMakeFiles/unit_tests.dir/TestFftProcessor.cpp.o -o unit_tests  /usr/lib/x86_64-linux-gnu/libgtest_main.a ../src/libcore_lib.a /usr/lib/x86_64-linux-gnu/libgtest.a -lfftw3

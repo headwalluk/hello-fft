@@ -15,3 +15,9 @@ add_subdirectory(src)
 # Testing
 enable_testing()
 add_subdirectory(tests)
+
+# Custom clean target that can be run from project root
+add_custom_target(clean-all
+    COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
+    COMMENT "Cleaning all build artifacts"
+)

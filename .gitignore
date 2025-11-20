@@ -1,0 +1,43 @@
+# Build directories
+build/
+cmake-build-*/
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.cmake
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Output files
+output/*.csv
+output/*.png
+output/*.jpg
+
+# Python cache (for data generation script)
+__pycache__/
+*.pyc
+*.pyo
+
+# Test results
+Testing/
+
+# Core dumps
+core
+core.*
